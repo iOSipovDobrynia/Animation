@@ -39,14 +39,19 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-aa-AbA">
-                                <rect key="frame" x="105" y="646.66666666666663" width="183" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start Core Animation">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <rect key="frame" x="75" y="645.66666666666663" width="243" height="36"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start Core Animation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startCoreAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ct-Hc-som"/>
                                 </connections>
@@ -59,6 +64,7 @@
                             <constraint firstItem="aFF-vd-XVt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="A52-WO-9qc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kYA-aa-AbA" secondAttribute="bottom" multiplier="1.2" id="LxA-HG-Sre"/>
                             <constraint firstItem="kYA-aa-AbA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Si1-rw-Z1K"/>
+                            <constraint firstItem="kYA-aa-AbA" firstAttribute="width" secondItem="aFF-vd-XVt" secondAttribute="width" id="jTv-jp-kPZ"/>
                             <constraint firstItem="aFF-vd-XVt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="tcL-vt-jso"/>
                         </constraints>
                     </view>

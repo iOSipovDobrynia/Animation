@@ -10,8 +10,19 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var coreAnimationView: UIView!
     
+    private var animationIsStarted = false
+    
     @IBAction func startCoreAnimation(_ sender: UIButton) {
         print("func")
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0,
+            options: [.autoreverse, .repeat]) { [unowned self] in
+                if !animationIsStarted {
+                    coreAnimationView.frame.origin.x -= 40
+                    animationIsStarted.toggle()
+                }
+            }
         sender.pulsate()
     }
 }

@@ -8,12 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet var coreAnimationView: UIView!
+    
+    @IBAction func startCoreAnimation(_ sender: UIButton) {
     }
-
-
 }
 

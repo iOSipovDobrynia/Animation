@@ -38,7 +38,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-aa-AbA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-aa-AbA" customClass="SpringButton" customModule="SpringAnimation">
                                 <rect key="frame" x="75" y="645.66666666666663" width="243" height="36"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -52,8 +52,11 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startSpringAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nK4-BV-GES"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jae-tJ-iFa">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jae-tJ-iFa" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="75" y="299" width="243" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring Animation View" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ua-Zl-uGm">
@@ -113,6 +116,7 @@
                     </view>
                     <connections>
                         <outlet property="coreAnimationView" destination="aFF-vd-XVt" id="Ugr-BB-uH7"/>
+                        <outlet property="springAnimationView" destination="jae-tJ-iFa" id="7pJ-ec-3GE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

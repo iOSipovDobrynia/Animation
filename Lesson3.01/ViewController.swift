@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         sender.pulsate()
     }
     @IBAction func startSpringAnimation(_ sender: SpringButton) {
-        springAnimationView.animation = "wobble"
+        springAnimationView.animation = "fall"
         springAnimationView.animate()
         
         sender.animation = "swing"

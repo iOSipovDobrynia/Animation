@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SpringAnimation
 
 struct Parameters {
     let force: Double
@@ -15,18 +16,18 @@ struct Parameters {
     let curves: String
     
     static func getParameters() -> Parameters {
-        let randomForce = Double.random(in: 1...2)
-        let randomDuration = Double.random(in: 0.5...1)
+        let randomForce = Double.random(in: 1...1.5)
+        let randomDuration = Double.random(in: 1...2)
         let randomDelay = Double.random(in: 0...0.5)
-        let randomAnimation = "pop"
-        let randomCurves = ""
+        let randomAnimation = AnimationPreset.allCases.randomElement()?.rawValue
+        let randomCurves = AnimationCurve.allCases.randomElement()?.rawValue
         
         let randomParameters = Parameters(
             force: randomForce,
             duration: randomDuration,
             delay: randomDelay,
-            animation: randomAnimation,
-            curves: randomCurves
+            animation: randomAnimation ?? "pop",
+            curves: randomCurves ?? "easeIn"
         )
         
         return randomParameters

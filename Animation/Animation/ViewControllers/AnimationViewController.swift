@@ -8,7 +8,7 @@
 import UIKit
 import SpringAnimation
 
-class ViewController: UIViewController {
+final class AnimationViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var springAnimationView: SpringView!
     
@@ -20,14 +20,12 @@ class ViewController: UIViewController {
     
     @IBOutlet var runButton: UIButton!
     
-    // MARK: - Public prop
-    var currentParameters = Parameters.getParameters()
+    // MARK: - Private prop
+    private var currentParameters = Parameters.getParameters()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateLabels(with: currentParameters)
         updateButton(with: currentParameters)
-
     }
     
     // MARK: - IBActions
@@ -41,8 +39,10 @@ class ViewController: UIViewController {
         updateButton(with: newParameters)
         currentParameters = newParameters
     }
-    
-    // MARK: - Private methods
+}
+
+// MARK: - Private methods
+extension AnimationViewController {
     private func updateLabels(with parameters: Parameters) {
         presetLabel.text = "Preset: \(parameters.animation)"
         curveLabel.text = "Curve: \(parameters.curves)"
@@ -63,4 +63,3 @@ class ViewController: UIViewController {
         springAnimationView.delay = parameters.delay
     }
 }
-
